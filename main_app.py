@@ -106,7 +106,7 @@ st.markdown(
     unsafe_allow_html=True)
 st.markdown(
     """
-    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -50px;">[6 to 48 hours]</h5>
+    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -100px;">[6 to 48 hours]</h5>
     """,
     unsafe_allow_html=True)
 st.markdown("""
