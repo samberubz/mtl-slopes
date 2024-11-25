@@ -100,7 +100,7 @@ st.write("")
 st.markdown(
     """
     <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -5px;">Select Forecast Time</h5>
-    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: 0px;">[6 to 48 hours]</h5>
+    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -10px;">[6 to 48 hours]</h5>
 
     """,
     unsafe_allow_html=True)
@@ -109,7 +109,7 @@ st.markdown("""
     .stSlider [data-baseweb=slider]{
         width: 80%;
         margin: auto; /* Center slider horizontally */
-        padding-top: -20px;
+        padding-top: 0px;
         padding-bottom: 15px;
     }
         .stSlider [role="slider"] {
