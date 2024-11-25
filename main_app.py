@@ -114,7 +114,7 @@ st.markdown("""
     .stSlider [data-baseweb=slider]{
         width: 80%;
         margin: auto; /* Center slider horizontally */
-        margin-top: 0px;
+        margin-top: -50px;
         padding-top: -50px;
         padding-bottom: 15px;
     }
