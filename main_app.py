@@ -100,7 +100,7 @@ st.write("")
 st.markdown(
     """
     <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -5px;">Select Forecast Time</h5>
-    <h4 style="text-align: center; padding-bottom: 0px; margin-bottom: -5px;">[6 to 48 hours]</h4>
+    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: 0px;">[6 to 48 hours]</h5>
 
     """,
     unsafe_allow_html=True)
