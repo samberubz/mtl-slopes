@@ -99,7 +99,7 @@ st.write("")
 # 1. Slider
 st.markdown(
     """
-    <h5 style="text-align: center; padding-bottom: 30px; margin-bottom: -50px;">Select Forecast Time" \n "[6 to 48 hours]"</h5>
+    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -50px;">Select Forecast Time [6 to 48 hours]"</h5>
     """,
     unsafe_allow_html=True)
 st.markdown("""
@@ -108,6 +108,7 @@ st.markdown("""
         width: 80%;
         margin: auto; /* Center slider horizontally */
         padding-top: 0px;
+        padding-bottom: 15px;
     }
         .stSlider [role="slider"] {
         background: linear-gradient(90deg, #FFA500, #FF0000); /* Orange to red gradient */
