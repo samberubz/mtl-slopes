@@ -92,16 +92,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.title("     **Welcome !**")
-st.write("Hey Skiers, this app was designed for you! :skier::snow_capped_mountain:" \n " It gathers snow forecasts for three well-known ski stations," \n
-)
-st.write("making it your perfect destination before hitting the slopes! :car:")
+st.write("Hey Skiers, this app was designed for you! :skier::snow_capped_mountain: It gathers snow forecasts for three well-known ski stations, making it your perfect destination before hitting the slopes! :car:")
 st.write("")
 # ____________________________________________________________________________________________________
 # PARAMETERS
 # 1. Slider
 st.markdown(
     """
-    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -50px;">Select Forecast Time [6 to 48 hours]</h5>
+    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -90px;">Select Forecast Time [6 to 48 hours]</h5>
     """,
     unsafe_allow_html=True)
 st.markdown("""
