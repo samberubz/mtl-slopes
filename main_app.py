@@ -99,8 +99,8 @@ st.write("")
 # 1. Slider
 st.markdown(
     """
-    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -50px;">Select Forecast Time</h5>
-    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -50px;">[6 to 48 hours]</h5>
+    <h5 style="text-align: center; padding-bottom: 0px; margin-bottom: -20px;">Select Forecast Time</h5>
+    <h4 style="text-align: center; padding-bottom: 0px; margin-bottom: -20px;">[6 to 48 hours]</h4>
 
     """,
     unsafe_allow_html=True)
