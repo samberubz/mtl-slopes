@@ -92,8 +92,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 st.title("     **Welcome !**")
-st.write("Hey Skiers, this app was designed for you! :skier::snow_capped_mountain:")
-st.write("It gathers snow forecasts for three well-known ski stations,")
+st.write("Hey Skiers, this app was designed for you! :skier::snow_capped_mountain:" \n " It gathers snow forecasts for three well-known ski stations," \n
+)
 st.write("making it your perfect destination before hitting the slopes! :car:")
 st.write("")
 # ____________________________________________________________________________________________________
