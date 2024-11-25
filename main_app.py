@@ -5,9 +5,6 @@ import pandas as pd
 import requests
 from concurrent.futures import ThreadPoolExecutor
 
-# Set page configuration for mobile-friendly layout
-st.set_page_config(layout="wide", page_title="Ski Forecasts", page_icon="❄️", initial_sidebar_state="collapsed")
-
 # Set the theme to always light
 st.markdown("""
     <style>
