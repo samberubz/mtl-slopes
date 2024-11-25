@@ -5,6 +5,33 @@ import pandas as pd
 import requests
 from concurrent.futures import ThreadPoolExecutor
 
+# Set page configuration for mobile-friendly layout
+st.set_page_config(layout="wide", page_title="Ski Forecasts", page_icon="❄️", initial_sidebar_state="collapsed")
+
+# Set the theme to always light
+st.markdown("""
+    <style>
+    /* Set light theme */
+    .stApp {
+        background-color: #fcfcfc; /* Light background */
+    }
+
+    .stMarkdown {
+        color: #333; /* Dark text for light theme */
+    }
+
+    /* Force light theme for Streamlit */
+    .st-radio, .st-slider, .st-button, .st-selectbox, .st-text-input {
+        background-color: #fff !important;
+        color: #333 !important;
+    }
+
+    .stSlider [role="slider"]:hover {
+        box-shadow: 0 0 30px rgba(33, 150, 243, 0.8); /* Add glow on hover */
+    }
+    </style>
+    """, unsafe_allow_html=True)
+
 station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
 num_points_per_side = 6
 
@@ -107,7 +134,7 @@ st.markdown(
 st.markdown("""
     <style>
     .stSlider [data-baseweb=slider]{
-        width: 25%;
+        width: 80%;
         margin: auto; /* Center slider horizontally */
         padding-top: 0px;
     }
