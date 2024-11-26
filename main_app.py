@@ -4,9 +4,14 @@ import numpy as np
 import pandas as pd
 import requests
 from concurrent.futures import ThreadPoolExecutor
+import matplotlib.pyplot as plt
+from io import BytesIO
 
 station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
 num_points_per_side = 6
+
+
+
 
 
 def generate_coordinates(lat_min, lat_max, lon_min, lon_max, num_points):
