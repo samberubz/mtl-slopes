@@ -254,13 +254,13 @@ st.markdown(
     <style>
     .tremblant-table {
         border-collapse: collapse;
-        width: 1000px; /* Set the table's width explicitly */
+        width: 100%; /* Set the table's width explicitly */
         margin: 20px auto; /* Center the table horizontally */
         font-family: 'Montserrat', sans-serif;
     }
     .tremblant-table th, .tremblant-table td {
         border: 1px solid #ddd; /* Light gray borders */
-        padding: auto; /* Sufficient padding for readability */
+        padding: 15px; /* Sufficient padding for readability */
         text-align: center;
     }
     .tremblant-table th {
@@ -292,7 +292,15 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
+@media (max-width: 768px) {
+    .tremblant-table {
+        width: 95%; /* Make the table fit smaller screens */
+    }
+    .tremblant-table th, .tremblant-table td {
+        padding: 10px; /* Reduce padding on small screens */
+        font-size: 14px; /* Adjust font size */
+    }
+}
 # 2. Display
 layer_tremblant = pdk.Layer(
     "HeatmapLayer",
