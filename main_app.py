@@ -262,7 +262,7 @@ st.markdown(
     .tremblant-table th, .tremblant-table td {
         border: 0px; /* Gray borders */
         border-radius: 0px; /* Rounded corners */
-        padding: 0px;
+        padding: 50px;
         text-align: center;
     }
     .tremblant-table th:first-child, .tremblant-table td:first-child {
