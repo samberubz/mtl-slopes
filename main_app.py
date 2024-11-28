@@ -253,34 +253,41 @@ st.markdown(
     """
     <style>
     .tremblant-table {
-        border-collapse: auto;
-        border-spacing: 10px;
-        width: 50%;
-        margin: 10px;
+        border-collapse: collapse;
+        width: 100%; /* Full width on all screens */
+        margin: 10px auto;
         font-family: 'Montserrat', sans-serif;
     }
     .tremblant-table th, .tremblant-table td {
-        border: 3px; /* Gray borders */
-        border-radius: 0px; /* Rounded corners */
-        padding: 50px;
+        border: 1px solid #ddd; /* Light gray borders */
+        padding: 8px; /* Reduce padding for smaller screens */
         text-align: center;
+        word-wrap: break-word; /* Enable text wrapping */
     }
-    .tremblant-table th:first-child, .tremblant-table td:first-child {
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
+    .tremblant-table th {
+        background-color: #f2f2f2; /* Light gray background for headers */
+        color: black;
     }
-    .tremblant-table th:last-child, .tremblant-table td:last-child {
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
+    .tremblant-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    .tremblant-table tr:hover {
+        background-color: #ddd; /* Highlight row on hover */
+    }
+    @media (max-width: 768px) {
+        .tremblant-table th, .tremblant-table td {
+            font-size: 12px; /* Smaller font size for mobile */
+            padding: 6px; /* Less padding on small screens */
+        }
     }
     </style>
 
     <table class="tremblant-table">
         <tr>
-            <th> Altitue </th>
-            <th> Trails </th>
-            <th> Slopes </th>
-            <th> Lifts </th>
+            <th>Altitude</th>
+            <th>Trails</th>
+            <th>Slopes</th>
+            <th>Lifts</th>
         </tr>
         <tr>
             <td>875 m</td>
