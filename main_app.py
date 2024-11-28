@@ -255,7 +255,7 @@ st.markdown(
     .tremblant-table {
         border-collapse: auto;
         border-spacing: 10px;
-        width: 50%;
+        width: 100%;
         margin: 10px;
         font-family: 'Montserrat', sans-serif;
     }
