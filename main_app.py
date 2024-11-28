@@ -292,7 +292,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-@media (max-width: 600px) {
+@media {
     .tremblant-table {
         width: 95%; /* Make the table fit smaller screens */
     }
