@@ -253,7 +253,7 @@ st.markdown(
     """
     <style>
     .tremblant-table {
-        border-collapse: separate;
+        border-collapse: auto;
         border-spacing: 10px;
         width: 50%;
         margin: 10px;
