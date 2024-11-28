@@ -8,6 +8,7 @@ from io import BytesIO
 
 station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
 num_points_per_side = 6
+st.set_page_config(layout="wide")
 
 
 def generate_coordinates(lat_min, lat_max, lon_min, lon_max, num_points):
