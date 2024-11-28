@@ -277,7 +277,7 @@ st.markdown(
 
     <table class="tremblant-table">
         <tr>
-            <th> Altitude </th>
+            <th> Altitue </th>
             <th> Trails </th>
             <th> Slopes </th>
             <th> Lifts </th>
