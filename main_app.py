@@ -292,15 +292,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-@media {
-    .tremblant-table {
-        width: 95%; /* Make the table fit smaller screens */
-    }
-    .tremblant-table th, .tremblant-table td {
-        padding: 10px; /* Reduce padding on small screens */
-        font-size: 14px; /* Adjust font size */
-    }
-}
 # 2. Display
 layer_tremblant = pdk.Layer(
     "HeatmapLayer",
