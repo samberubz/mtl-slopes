@@ -257,13 +257,13 @@ st.markdown(
         border-collapse: separate;
         border-spacing: 0;
         width: 35%;
-        margin: auto;
+        margin: 0 auto;
         font-family: 'Montserrat', sans-serif;
     }
     .tremblant-table th, .tremblant-table td {
         border: 0px; /* Gray borders */
         border-radius: 0px; /* Rounded corners */
-        padding: 10px;
+        padding: 0px;
         text-align: center;
     }
     .tremblant-table th:first-child, .tremblant-table td:first-child {
