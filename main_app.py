@@ -261,7 +261,7 @@ st.markdown(
     .tremblant-table th, .tremblant-table td {
         border: 1px solid #ddd; /* Light gray borders */
         padding: 15px; /* Sufficient padding for readability */
-        text-align: left;
+        text-align: center;
     }
     .tremblant-table th {
         background-color: #f2f2f2; /* Light gray background for headers */
@@ -277,13 +277,11 @@ st.markdown(
 
     <table class="tremblant-table">
         <tr>
-            <td>Altitude</td>
-            <td>Trails</td>
+            <th>Trails</th>
             <th>Slopes</th>
             <th>Lifts</th>
         </tr>
         <tr>
-            <td>875 m</td>
             <td>102</td>
             <td>4</td>
             <td>14</td>
