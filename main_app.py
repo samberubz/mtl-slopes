@@ -11,9 +11,6 @@ station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
 num_points_per_side = 6
 
 
-
-
-
 def generate_coordinates(lat_min, lat_max, lon_min, lon_max, num_points):
     lats = np.linspace(lat_min, lat_max, num_points)
     lons = np.linspace(lon_min, lon_max, num_points)
@@ -260,8 +257,8 @@ st.markdown(
         border-collapse: separate;
         border-spacing: 0;
         width: 30%;
-        margin: 0 auto;
-        font-family: 'Montserrat', sans-serif;
+        margin: auto;
+        font-family: 'Lexend', sans-serif;
     }
     .tremblant-table th, .tremblant-table td {
         border: 0px; /* Gray borders */
