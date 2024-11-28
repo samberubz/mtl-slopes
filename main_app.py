@@ -246,7 +246,7 @@ for station in station_list:
 # ____________________________________________________________________________________________________
 # MONT-TREMBLANT
 st.markdown("<p>___________________</p>", unsafe_allow_html=True)
-st.markdown("<h1>Mont-Tremblant</h1>", unsafe_allow_html=True)
+st.markdown("<h1>Mt Tremblant</h1>", unsafe_allow_html=True)
 # 1. Table
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
 st.markdown(
@@ -255,7 +255,7 @@ st.markdown(
     .tremblant-table {
         border-collapse: separate;
         border-spacing: 0;
-        width: 35%;
+        width: 50%;
         margin: 0 auto;
         font-family: 'Montserrat', sans-serif;
     }
@@ -328,7 +328,7 @@ with col2:  # Middle column
 # ____________________________________________________________________________________________________
 # MONT ORFORD
 st.markdown("<p>___________________</p>", unsafe_allow_html=True)
-st.markdown("<h1>Mont Orford</h1>", unsafe_allow_html=True)
+st.markdown("<h1>Mt Orford</h1>", unsafe_allow_html=True)
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
 st.markdown(
     """
@@ -408,7 +408,7 @@ with col2:  # Middle column
 # ____________________________________________________________________________________________________
 # MONT SUTTON
 st.markdown("<p>___________________</p>", unsafe_allow_html=True)
-st.markdown("<h1>Mont Sutton</h1>", unsafe_allow_html=True)
+st.markdown("<h1>Mt Sutton</h1>", unsafe_allow_html=True)
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
 st.markdown(
     """
