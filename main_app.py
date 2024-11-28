@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import requests
 from concurrent.futures import ThreadPoolExecutor
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from io import BytesIO
 
 station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
