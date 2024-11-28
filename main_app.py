@@ -8,7 +8,6 @@ from io import BytesIO
 
 station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
 num_points_per_side = 6
-st.set_page_config(layout="wide")
 
 
 def generate_coordinates(lat_min, lat_max, lon_min, lon_max, num_points):
@@ -255,13 +254,13 @@ st.markdown(
     <style>
     .tremblant-table {
         border-collapse: collapse;
-        width: 100%; /* Full width on all screens */
-        margin: 10px auto;
+        width: 600px; /* Set the table's width explicitly */
+        margin: 20px auto; /* Center the table horizontally */
         font-family: 'Montserrat', sans-serif;
     }
     .tremblant-table th, .tremblant-table td {
         border: 1px solid #ddd; /* Light gray borders */
-        padding: 8px; /* Reduce padding for smaller screens */
+        padding: 12px; /* Sufficient padding for readability */
         text-align: center;
         word-wrap: break-word; /* Enable text wrapping */
     }
@@ -274,12 +273,6 @@ st.markdown(
     }
     .tremblant-table tr:hover {
         background-color: #ddd; /* Highlight row on hover */
-    }
-    @media (max-width: 768px) {
-        .tremblant-table th, .tremblant-table td {
-            font-size: 12px; /* Smaller font size for mobile */
-            padding: 6px; /* Less padding on small screens */
-        }
     }
     </style>
 
@@ -300,6 +293,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 # 2. Display
 layer_tremblant = pdk.Layer(
     "HeatmapLayer",
