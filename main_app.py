@@ -254,7 +254,7 @@ st.markdown(
     <style>
     .tremblant-table {
         border-collapse: collapse;
-        width: 600px; /* Set the table's width explicitly */
+        width: 700px; /* Set the table's width explicitly */
         margin: 20px auto; /* Center the table horizontally */
         font-family: 'Montserrat', sans-serif;
     }
@@ -278,7 +278,7 @@ st.markdown(
 
     <table class="tremblant-table">
         <tr>
-            <th>Altitude</th>
+            <th>Altitude  </th>
             <th>Trails</th>
             <th>Slopes</th>
             <th>Lifts</th>
