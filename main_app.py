@@ -255,12 +255,12 @@ st.markdown(
     .tremblant-table {
         border-collapse: auto;
         border-spacing: 10px;
-        width: 100%;
+        width: 50%;
         margin: 10px;
         font-family: 'Montserrat', sans-serif;
     }
     .tremblant-table th, .tremblant-table td {
-        border: 0px; /* Gray borders */
+        border: 3px; /* Gray borders */
         border-radius: 0px; /* Rounded corners */
         padding: 50px;
         text-align: center;
