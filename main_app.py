@@ -258,12 +258,12 @@ st.markdown(
         border-collapse: collapse;
         width: 50%; /* Increase the table width */
         min-width: 30px; /* Ensure the table has a minimum width */
-        margin: 40px auto; /* Center the table */
+        margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
         border: 0px solid #ddd; /* Light gray borders */
-        padding: 10px; /* Increase padding for more spacious cells */
+        padding: 0px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
         min-width: 10px; /* Ensure columns are wide enough */
     }}
