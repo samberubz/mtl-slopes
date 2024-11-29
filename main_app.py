@@ -259,7 +259,7 @@ st.markdown(
     .tremblant-table {{
         border-collapse: collapse;
         width: 80%; /* Increase the table width */
-        min-width: 600px; /* Ensure the table has a minimum width */
+        min-width: 280px; /* Ensure the table has a minimum width */
         margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
@@ -290,19 +290,63 @@ st.markdown(
             <th>Trails</th>
             <th>Slopes</th>
             <th>Lifts</th>
-            <th>Snow Depth (cm)</th>
+            <th>Altitude</th>
         </tr>
         <tr>
             <td>102</td>
             <td>4</td>
             <td>14</td>
-            <td>{snow_depths[0]}</td>
+            <td>875 m</td>
         </tr>
     </table>
     """,
     unsafe_allow_html=True
 )
+st.markdown(
+    f"""
+    <style>
+    .tremblant-table {{
+        border-collapse: collapse;
+        width: 80%; /* Increase the table width */
+        min-width: 280px; /* Ensure the table has a minimum width */
+        margin: 20px auto; /* Center the table */
+        font-family: 'Montserrat', sans-serif;
+    }}
+    .tremblant-table th, .tremblant-table td {{
+        border: 1px solid #ddd; /* Light gray borders */
+        padding: 20px; /* Increase padding for more spacious cells */
+        text-align: center; /* Center align text */
+        min-width: 150px; /* Ensure columns are wide enough */
+    }}
+    .tremblant-table th {{
+        background-color: #f2f2f2; /* Light gray header background */
+        color: black;
+        font-size: 18px; /* Increase header font size for better readability */
+    }}
+    .tremblant-table td {{
+        font-size: 16px; /* Increase cell font size */
+    }}
+    .tremblant-table tr:nth-child(even) {{
+        background-color: #f9f9f9; /* Light gray for even rows */
+    }}
+    .tremblant-table tr:hover {{
+        background-color: #ddd; /* Highlight on hover */
+    }}
+    </style>
 
+    <table class="tremblant-table">
+        <tr>
+            <th>Snow Depth 24h (cm)</th>
+            <th>Snow Depth 48h (cm)</th>
+        </tr>
+        <tr>
+            <td>{snow_depths[0]}</td>
+            <td>{snow_depths[1]}</td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
 # 2. Display
 layer_tremblant = pdk.Layer(
     "HeatmapLayer",
