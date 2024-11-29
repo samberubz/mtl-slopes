@@ -4,21 +4,16 @@ import numpy as np
 import pandas as pd
 import requests
 from concurrent.futures import ThreadPoolExecutor
-from io import BytesIO
+
 
 station_list=["Mont-Tremblant", "Mont Orford", "Mont Sutton"]
-num_points_per_side = 6
+num_points_per_side = 10
 
 
 def generate_coordinates(lat_min, lat_max, lon_min, lon_max, num_points):
     lats = np.linspace(lat_min, lat_max, num_points)
     lons = np.linspace(lon_min, lon_max, num_points)
     return [{"lat": lat, "lon": lon} for lat in lats for lon in lons]
-
-
-coords_tremblant = generate_coordinates(46.18, 46.22, -74.60, -74.52, num_points_per_side)
-coords_orford = generate_coordinates(45.33, 45.37, -72.18, -72.10, num_points_per_side)
-coords_sutton = generate_coordinates(45.09, 45.13, -72.65, -72.57, num_points_per_side)
 
 
 # Function to fetch forecast data
@@ -64,6 +59,10 @@ def fetch_all_forecasts(coords, forecast_hours, selected_type):
         )
     return [res for res in results if res is not None and not res.empty]
 
+
+coords_tremblant = generate_coordinates(46.18, 46.22, -74.7, -74.5, num_points_per_side)
+coords_orford = generate_coordinates(45.33, 45.37, -72.3, -72.05, num_points_per_side)
+coords_sutton = generate_coordinates(45.09, 45.13, -72.6, -72.5, num_points_per_side)
 
 # ____________________________________________________________________________________________________
 # INTRODUCTION
@@ -348,14 +347,20 @@ layer_tremblant = pdk.Layer(
     data=data_tremblant,
     get_position="position",
     get_weight="weight",  # Use the precipitation amount to influence intensity
-    radius_pixels=300,  # Adjust the radius of influence of each data point
-    intensity=0.4,
+    radius_pixels=600,  # Adjust the radius of influence of each data point
+    intensity=0.37,
     threshold=0.001,
     color_range=[
-        [198, 229, 255, 160],  # Light blue for low precipitation
-        [135, 206, 250, 220],  # Sky blue for slightly higher
-        [0, 43, 226, 300],  # Blue-violet for intense precipitation
-        [0, 0, 130, 300]  # Dark purple for maximum precipitation
+        [130, 100, 255, 40],
+        [110, 80, 255, 110],
+        [90, 60, 255, 120],
+        [70, 40, 255, 130],
+        [60, 20, 230, 140],  # Soft medium purple with more transparency
+        [50, 0, 200, 150],  # Medium purple
+        [40, 0, 170, 160],
+        [30, 0, 140, 170],
+        [20, 0, 110, 180],
+        [10, 0, 80, 190],  # Dark purple for maximum precipitation with high transparency
     ]
 )
 map_tremblant = pdk.Deck(
@@ -367,7 +372,8 @@ map_tremblant = pdk.Deck(
         pitch=50,
         bearing=0,
         max_zoom=11.7,
-        min_zoom=11.7
+        min_zoom=11.7,
+        interactive=False
     ),
     layers=[layer_tremblant]
 )
@@ -478,14 +484,20 @@ layer_orford = pdk.Layer(
     data=data_orford,
     get_position="position",
     get_weight="weight",  # Use the precipitation amount to influence intensity
-    radius_pixels=300,  # Adjust the radius of influence of each data point
-    intensity=0.4,
+    radius_pixels=600,  # Adjust the radius of influence of each data point
+    intensity=0.37,
     threshold=0.001,
     color_range=[
-        [198, 229, 255, 160],  # Light blue for low precipitation
-        [135, 206, 250, 220],  # Sky blue for slightly higher
-        [0, 43, 226, 300],  # Blue-violet for intense precipitation
-        [0, 0, 130, 300]  # Dark purple for maximum precipitation
+        [130, 100, 255, 40],
+        [110, 80, 255, 110],
+        [90, 60, 255, 120],
+        [70, 40, 255, 130],
+        [60, 20, 230, 140],  # Soft medium purple with more transparency
+        [50, 0, 200, 150],  # Medium purple
+        [40, 0, 170, 160],
+        [30, 0, 140, 170],
+        [20, 0, 110, 180],
+        [10, 0, 80, 190],  # Dark purple for maximum precipitation with high transparency
     ]
 )
 map_orford = pdk.Deck(
@@ -504,6 +516,7 @@ map_orford = pdk.Deck(
 col1, col2, col3 = st.columns([2, 2, 2])  # Adjust the proportions as needed
 with col2:  # Middle column
     st.pydeck_chart(map_orford, use_container_width=True)
+
 
 # ____________________________________________________________________________________________________
 # MONT SUTTON
@@ -608,14 +621,20 @@ layer_sutton = pdk.Layer(
     data=data_sutton,
     get_position="position",
     get_weight="weight",  # Use the precipitation amount to influence intensity
-    radius_pixels=300,  # Adjust the radius of influence of each data point
-    intensity=0.4,
+    radius_pixels=600,  # Adjust the radius of influence of each data point
+    intensity=0.37,
     threshold=0.001,
     color_range=[
-        [198, 229, 255, 160],  # Light blue for low precipitation
-        [135, 206, 250, 220],  # Sky blue for slightly higher
-        [0, 43, 226, 300],  # Blue-violet for intense precipitation
-        [0, 0, 130, 300]  # Dark purple for maximum precipitation
+        [130, 100, 255, 40],
+        [110, 80, 255, 110],
+        [90, 60, 255, 120],
+        [70, 40, 255, 130],
+        [60, 20, 230, 140],  # Soft medium purple with more transparency
+        [50, 0, 200, 150],  # Medium purple
+        [40, 0, 170, 160],
+        [30, 0, 140, 170],
+        [20, 0, 110, 180],
+        [10, 0, 80, 190],  # Dark purple for maximum precipitation with high transparency
     ]
 )
 map_sutton = pdk.Deck(
