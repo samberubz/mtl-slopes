@@ -242,17 +242,15 @@ for station in station_list:
         data_sutton["position"] = data_sutton.apply(
             lambda row: [row["lon"], row["lat"]], axis=1
         )
-
+snow_depths_tremblant = [120, 95]  # Replace with your dynamic values
+snow_depths_orford = [120, 95]  # Replace with your dynamic values
+snow_depths_sutton = [120, 95]  # Replace with your dynamic values
 # ____________________________________________________________________________________________________
 # MONT-TREMBLANT
 st.markdown("<p>_______________________________</p>", unsafe_allow_html=True)
 st.markdown("<h1>Tremblant</h1>", unsafe_allow_html=True)
 # 1. Table
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
-# Example dynamic snow depth values
-# Example dynamic snow depth values
-snow_depths = [120, 95]  # Replace with your dynamic values
-
 st.markdown(
     f"""
     <style>
@@ -382,51 +380,103 @@ with col2:  # Middle column
 
 # ____________________________________________________________________________________________________
 # MONT ORFORD
-st.markdown("<p>___________________</p>", unsafe_allow_html=True)
+st.markdown("<p>_______________________________</p>", unsafe_allow_html=True)
 st.markdown("<h1>Orford</h1>", unsafe_allow_html=True)
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
 st.markdown(
-    """
+    f"""
     <style>
-    .tremblant-table {
-        border-collapse: separate;
-        border-spacing: 0;
-        width: 30%;
-        margin: 0 auto;
+    .tremblant-table {{
+        border-collapse: collapse;
+        width: 50%; /* Increase the table width */
+        min-width: 260px; /* Ensure the table has a minimum width */
+        margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
-    }
-    .tremblant-table th, .tremblant-table td {
-        border: 0px; /* Gray borders */
-        border-radius: 0px; /* Rounded corners */
-        padding: 0px;
-        text-align: center;
-    }
-    .tremblant-table th:first-child, .tremblant-table td:first-child {
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-    }
-    .tremblant-table th:last-child, .tremblant-table td:last-child {
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-    }
+    }}
+    .tremblant-table th, .tremblant-table td {{
+        border: 1px solid #ddd; /* Light gray borders */
+        padding: 20px; /* Increase padding for more spacious cells */
+        text-align: center; /* Center align text */
+        min-width: 10px; /* Ensure columns are wide enough */
+    }}
+    .tremblant-table th {{
+        background-color: #f2f2f2; /* Light gray header background */
+        color: black;
+        font-size: 14px; /* Increase header font size for better readability */
+    }}
+    .tremblant-table td {{
+        font-size: 12px; /* Increase cell font size */
+    }}
+    .tremblant-table tr:nth-child(even) {{
+        background-color: #f9f9f9; /* Light gray for even rows */
+    }}
+    .tremblant-table tr:hover {{
+        background-color: #ddd; /* Highlight on hover */
+    }}
     </style>
 
     <table class="tremblant-table">
         <tr>
-            <th>Altitude</th>
             <th>Trails</th>
             <th>Slopes</th>
             <th>Lifts</th>
+            <th>Altitude</th>
         </tr>
         <tr>
-            <td>853 m</td>
             <td>44</td>
             <td>4</td>
             <td>5</td>
+            <td>853 m</td>
         </tr>
     </table>
     """,
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+)
+st.markdown(
+    f"""
+    <style>
+    .tremblant-table {{
+        border-collapse: collapse;
+        width: 80%; /* Increase the table width */
+        min-width: 100; /* Ensure the table has a minimum width */
+        margin: 20px auto; /* Center the table */
+        font-family: 'Montserrat', sans-serif;
+    }}
+    .tremblant-table th, .tremblant-table td {{
+        border: 1px solid #ddd; /* Light gray borders */
+        padding: 20px; /* Increase padding for more spacious cells */
+        text-align: center; /* Center align text */
+        min-width: 50px; /* Ensure columns are wide enough */
+    }}
+    .tremblant-table th {{
+        background-color: #f2f2f2; /* Light gray header background */
+        color: black;
+        font-size: 12px; /* Increase header font size for better readability */
+    }}
+    .tremblant-table td {{
+        font-size: 12px; /* Increase cell font size */
+    }}
+    .tremblant-table tr:nth-child(even) {{
+        background-color: #f9f9f9; /* Light gray for even rows */
+    }}
+    .tremblant-table tr:hover {{
+        background-color: #ddd; /* Highlight on hover */
+    }}
+    </style>
+
+    <table class="tremblant-table">
+        <tr>
+            <th>Snow Forecast 24h (cm)</th>
+            <th>Snow Forecast 48h (cm)</th>
+        </tr>
+        <tr>
+            <td>{snow_depths[0]}</td>
+            <td>{snow_depths[1]}</td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
 # 2. Display
 layer_orford = pdk.Layer(
     "HeatmapLayer",
@@ -462,51 +512,103 @@ with col2:  # Middle column
 
 # ____________________________________________________________________________________________________
 # MONT SUTTON
-st.markdown("<p>___________________</p>", unsafe_allow_html=True)
+st.markdown("<p>_______________________________</p>", unsafe_allow_html=True)
 st.markdown("<h1>Sutton</h1>", unsafe_allow_html=True)
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
 st.markdown(
-    """
+    f"""
     <style>
-    .tremblant-table {
-        border-collapse: separate;
-        border-spacing: 0;
-        width: 30%;
-        margin: 0 auto;
+    .tremblant-table {{
+        border-collapse: collapse;
+        width: 50%; /* Increase the table width */
+        min-width: 260px; /* Ensure the table has a minimum width */
+        margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
-    }
-    .tremblant-table th, .tremblant-table td {
-        border: 0px; /* Gray borders */
-        border-radius: 0px; /* Rounded corners */
-        padding: 0px;
-        text-align: center;
-    }
-    .tremblant-table th:first-child, .tremblant-table td:first-child {
-        border-top-left-radius: 2px;
-        border-bottom-left-radius: 2px;
-    }
-    .tremblant-table th:last-child, .tremblant-table td:last-child {
-        border-top-right-radius: 2px;
-        border-bottom-right-radius: 2px;
-    }
+    }}
+    .tremblant-table th, .tremblant-table td {{
+        border: 1px solid #ddd; /* Light gray borders */
+        padding: 20px; /* Increase padding for more spacious cells */
+        text-align: center; /* Center align text */
+        min-width: 10px; /* Ensure columns are wide enough */
+    }}
+    .tremblant-table th {{
+        background-color: #f2f2f2; /* Light gray header background */
+        color: black;
+        font-size: 14px; /* Increase header font size for better readability */
+    }}
+    .tremblant-table td {{
+        font-size: 12px; /* Increase cell font size */
+    }}
+    .tremblant-table tr:nth-child(even) {{
+        background-color: #f9f9f9; /* Light gray for even rows */
+    }}
+    .tremblant-table tr:hover {{
+        background-color: #ddd; /* Highlight on hover */
+    }}
     </style>
 
     <table class="tremblant-table">
         <tr>
-            <th>Altitude</th>
             <th>Trails</th>
-            <th>Slope</th>
+            <th>Slopes</th>
             <th>Lifts</th>
+            <th>Altitude</th>
         </tr>
         <tr>
-            <td>962 m</td>
             <td>60</td>
             <td>1</td>
             <td>9</td>
+            <td>962 m</td>
         </tr>
     </table>
     """,
-    unsafe_allow_html=True)
+    unsafe_allow_html=True
+)
+st.markdown(
+    f"""
+    <style>
+    .tremblant-table {{
+        border-collapse: collapse;
+        width: 80%; /* Increase the table width */
+        min-width: 100; /* Ensure the table has a minimum width */
+        margin: 20px auto; /* Center the table */
+        font-family: 'Montserrat', sans-serif;
+    }}
+    .tremblant-table th, .tremblant-table td {{
+        border: 1px solid #ddd; /* Light gray borders */
+        padding: 20px; /* Increase padding for more spacious cells */
+        text-align: center; /* Center align text */
+        min-width: 50px; /* Ensure columns are wide enough */
+    }}
+    .tremblant-table th {{
+        background-color: #f2f2f2; /* Light gray header background */
+        color: black;
+        font-size: 12px; /* Increase header font size for better readability */
+    }}
+    .tremblant-table td {{
+        font-size: 12px; /* Increase cell font size */
+    }}
+    .tremblant-table tr:nth-child(even) {{
+        background-color: #f9f9f9; /* Light gray for even rows */
+    }}
+    .tremblant-table tr:hover {{
+        background-color: #ddd; /* Highlight on hover */
+    }}
+    </style>
+
+    <table class="tremblant-table">
+        <tr>
+            <th>Snow Forecast 24h (cm)</th>
+            <th>Snow Forecast 48h (cm)</th>
+        </tr>
+        <tr>
+            <td>{snow_depths[0]}</td>
+            <td>{snow_depths[1]}</td>
+        </tr>
+    </table>
+    """,
+    unsafe_allow_html=True
+)
 # 2. Display
 layer_sutton = pdk.Layer(
     "HeatmapLayer",
