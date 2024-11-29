@@ -272,10 +272,10 @@ st.markdown(
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
         color: black;
-        font-size: 18px; /* Increase header font size for better readability */
+        font-size: 16px; /* Increase header font size for better readability */
     }}
     .tremblant-table td {{
-        font-size: 16px; /* Increase cell font size */
+        font-size: 12px; /* Increase cell font size */
     }}
     .tremblant-table tr:nth-child(even) {{
         background-color: #f9f9f9; /* Light gray for even rows */
@@ -321,10 +321,10 @@ st.markdown(
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
         color: black;
-        font-size: 18px; /* Increase header font size for better readability */
+        font-size: 16px; /* Increase header font size for better readability */
     }}
     .tremblant-table td {{
-        font-size: 16px; /* Increase cell font size */
+        font-size: 12px; /* Increase cell font size */
     }}
     .tremblant-table tr:nth-child(even) {{
         background-color: #f9f9f9; /* Light gray for even rows */
