@@ -245,7 +245,7 @@ for station in station_list:
 
 # ____________________________________________________________________________________________________
 # MONT-TREMBLANT
-st.markdown("<p>___________________</p>", unsafe_allow_html=True)
+st.markdown("<p>_________________________</p>", unsafe_allow_html=True)
 st.markdown("<h1>Tremblant</h1>", unsafe_allow_html=True)
 # 1. Table
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
