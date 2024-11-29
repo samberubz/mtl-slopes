@@ -286,13 +286,11 @@ st.markdown(
     <table class="tremblant-table">
         <tr>
             <th>Trails</th>
-            <th>Slopes</th>
             <th>Lifts</th>
             <th>Altitude</th>
         </tr>
         <tr>
             <td>102</td>
-            <td>4</td>
             <td>14</td>
             <td>875 m</td>
         </tr>
