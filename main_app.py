@@ -67,7 +67,6 @@ def fetch_all_forecasts(coords, forecast_hours, selected_type):
 
 # ____________________________________________________________________________________________________
 # INTRODUCTION
-st.set_page_config(layout="wide")
 # Display the image at the top of the page
 cola, colb, colc = st.columns([2, 2, 2])
 with colb:
