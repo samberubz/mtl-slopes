@@ -267,12 +267,12 @@ st.markdown(
         border: 1px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
-        min-width: 150px; /* Ensure columns are wide enough */
+        min-width: 50px; /* Ensure columns are wide enough */
     }}
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
         color: black;
-        font-size: 16px; /* Increase header font size for better readability */
+        font-size: 14px; /* Increase header font size for better readability */
     }}
     .tremblant-table td {{
         font-size: 12px; /* Increase cell font size */
@@ -321,7 +321,7 @@ st.markdown(
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
         color: black;
-        font-size: 16px; /* Increase header font size for better readability */
+        font-size: 12px; /* Increase header font size for better readability */
     }}
     .tremblant-table td {{
         font-size: 12px; /* Increase cell font size */
@@ -336,8 +336,8 @@ st.markdown(
 
     <table class="tremblant-table">
         <tr>
-            <th>24h Forecasted Snowfall (cm)</th>
-            <th>48h Forecasted Snowfall (cm)</th>
+            <th>Snow Forecast 24h (cm)</th>
+            <th>Snow Forecast 48h (cm)</th>
         </tr>
         <tr>
             <td>{snow_depths[0]}</td>
