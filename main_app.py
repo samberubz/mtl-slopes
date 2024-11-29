@@ -67,6 +67,7 @@ coords_sutton = generate_coordinates(45.09, 45.13, -72.6, -72.5, num_points_per_
 # ____________________________________________________________________________________________________
 # INTRODUCTION
 # Display the image at the top of the page
+st.set_page_config(layout="wide")
 cola, colb, colc = st.columns([2, 2, 2])
 with colb:
     st.image("Capture1.png", use_container_width="True")
