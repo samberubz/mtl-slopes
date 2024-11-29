@@ -338,8 +338,8 @@ st.markdown(
             <th>Snow Forecast 48h (cm)</th>
         </tr>
         <tr>
-            <td>{snow_depths[0]}</td>
-            <td>{snow_depths[1]}</td>
+            <td>{snow_depths_tremblant[0]}</td>
+            <td>{snow_depths_tremblant[1]}</td>
         </tr>
     </table>
     """,
@@ -470,8 +470,8 @@ st.markdown(
             <th>Snow Forecast 48h (cm)</th>
         </tr>
         <tr>
-            <td>{snow_depths[0]}</td>
-            <td>{snow_depths[1]}</td>
+            <td>{snow_depths_orford[0]}</td>
+            <td>{snow_depths_orford[1]}</td>
         </tr>
     </table>
     """,
@@ -602,8 +602,8 @@ st.markdown(
             <th>Snow Forecast 48h (cm)</th>
         </tr>
         <tr>
-            <td>{snow_depths[0]}</td>
-            <td>{snow_depths[1]}</td>
+            <td>{snow_depths_sutton[0]}</td>
+            <td>{snow_depths_sutton[1]}</td>
         </tr>
     </table>
     """,
