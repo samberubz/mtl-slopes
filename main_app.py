@@ -256,14 +256,14 @@ st.markdown(
     <style>
     .tremblant-table {{
         border-collapse: collapse;
-        width: 40%; /* Increase the table width */
+        width: 50%; /* Increase the table width */
         min-width: 30px; /* Ensure the table has a minimum width */
         margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
         border: 0px solid #ddd; /* Light gray borders */
-        padding: 20px; /* Increase padding for more spacious cells */
+        padding: 10px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
         min-width: 5px; /* Ensure columns are wide enough */
     }}
