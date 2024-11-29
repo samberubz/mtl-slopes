@@ -262,10 +262,10 @@ st.markdown(
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
-        border: 1px solid #ddd; /* Light gray borders */
+        border: 0px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
-        min-width: 10px; /* Ensure columns are wide enough */
+        min-width: 5px; /* Ensure columns are wide enough */
     }}
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
@@ -311,7 +311,7 @@ st.markdown(
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
-        border: 1px solid #ddd; /* Light gray borders */
+        border: 0px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
         min-width: 50px; /* Ensure columns are wide enough */
@@ -389,15 +389,15 @@ st.markdown(
     .tremblant-table {{
         border-collapse: collapse;
         width: 50%; /* Increase the table width */
-        min-width: 260px; /* Ensure the table has a minimum width */
+        min-width: 100px; /* Ensure the table has a minimum width */
         margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
-        border: 1px solid #ddd; /* Light gray borders */
+        border: 0px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
-        min-width: 10px; /* Ensure columns are wide enough */
+        min-width: 5px; /* Ensure columns are wide enough */
     }}
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
@@ -443,7 +443,7 @@ st.markdown(
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
-        border: 1px solid #ddd; /* Light gray borders */
+        border: 0px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
         min-width: 50px; /* Ensure columns are wide enough */
@@ -521,15 +521,15 @@ st.markdown(
     .tremblant-table {{
         border-collapse: collapse;
         width: 50%; /* Increase the table width */
-        min-width: 260px; /* Ensure the table has a minimum width */
+        min-width: 100px; /* Ensure the table has a minimum width */
         margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
-        border: 1px solid #ddd; /* Light gray borders */
+        border: 0px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
-        min-width: 10px; /* Ensure columns are wide enough */
+        min-width: 5px; /* Ensure columns are wide enough */
     }}
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
@@ -575,7 +575,7 @@ st.markdown(
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
-        border: 1px solid #ddd; /* Light gray borders */
+        border: 0px solid #ddd; /* Light gray borders */
         padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
         min-width: 50px; /* Ensure columns are wide enough */
