@@ -250,6 +250,7 @@ st.markdown("<h1>Tremblant</h1>", unsafe_allow_html=True)
 # 1. Table
 # st.write("[Website](https://promo.tremblant.ca/hiver/2425/launch/nordik?gad_source=1&gbraid=0AAAAA9foEmpCCkdWThwd9Mx4Z7_dQ_W7E&gclid=Cj0KCQiArby5BhCDARIsAIJvjIT5-wirWVKACD35C4QdO6DeqIbxlShnV4MnYgxYa14A4PO0uLGAphEaAtDJEALw_wcB)")
 # Example dynamic snow depth values
+# Example dynamic snow depth values
 snow_depths = [120, 95]  # Replace with your dynamic values
 
 st.markdown(
@@ -257,18 +258,24 @@ st.markdown(
     <style>
     .tremblant-table {{
         border-collapse: collapse;
-        width: 100%; /* Full-width table */
-        margin: 20px auto; /* Center the table horizontally */
+        width: 80%; /* Increase the table width */
+        min-width: 600px; /* Ensure the table has a minimum width */
+        margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
     .tremblant-table th, .tremblant-table td {{
         border: 1px solid #ddd; /* Light gray borders */
-        padding: 15px; /* Padding for readability */
+        padding: 20px; /* Increase padding for more spacious cells */
         text-align: center; /* Center align text */
+        min-width: 150px; /* Ensure columns are wide enough */
     }}
     .tremblant-table th {{
         background-color: #f2f2f2; /* Light gray header background */
         color: black;
+        font-size: 18px; /* Increase header font size for better readability */
+    }}
+    .tremblant-table td {{
+        font-size: 16px; /* Increase cell font size */
     }}
     .tremblant-table tr:nth-child(even) {{
         background-color: #f9f9f9; /* Light gray for even rows */
@@ -290,12 +297,6 @@ st.markdown(
             <td>4</td>
             <td>14</td>
             <td>{snow_depths[0]}</td>
-        </tr>
-        <tr>
-            <td>80</td>
-            <td>3</td>
-            <td>10</td>
-            <td>{snow_depths[1]}</td>
         </tr>
     </table>
     """,
