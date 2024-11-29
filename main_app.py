@@ -259,7 +259,7 @@ st.markdown(
     .tremblant-table {{
         border-collapse: collapse;
         width: 80%; /* Increase the table width */
-        min-width: 280px; /* Ensure the table has a minimum width */
+        min-width: 260px; /* Ensure the table has a minimum width */
         margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
     }}
@@ -336,8 +336,8 @@ st.markdown(
 
     <table class="tremblant-table">
         <tr>
-            <th>Snow Depth 24h (cm)</th>
-            <th>Snow Depth 48h (cm)</th>
+            <th>24h Forecasted Snowfall (cm)</th>
+            <th>48h Forecasted Snowfall (cm)</th>
         </tr>
         <tr>
             <td>{snow_depths[0]}</td>
