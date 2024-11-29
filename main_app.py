@@ -256,7 +256,7 @@ st.markdown(
     <style>
     .tremblant-table {{
         border-collapse: collapse;
-        width: 80%; /* Increase the table width */
+        width: 50%; /* Increase the table width */
         min-width: 30px; /* Ensure the table has a minimum width */
         margin: 20px auto; /* Center the table */
         font-family: 'Montserrat', sans-serif;
