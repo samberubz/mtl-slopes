@@ -1,0 +1,22 @@
+name: Keep Streamlit app awake
+
+on:
+  schedule:
+    - cron: "0 13 * * *"    # daily ~9am Montreal (13:00 UTC)
+  workflow_dispatch:          # manual "Run workflow" button in the Actions tab
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+      - name: Ping app
+        run: python scripts/keepalive.py
