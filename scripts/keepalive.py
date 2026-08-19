@@ -1,7 +1,7 @@
 from playwright.sync_api import sync_playwright
 
 URLS = [
-    "https://YOUR-APP-NAME.streamlit.app",   # <- your real app URL
+    "https://samberubz-pow.streamlit.app",   # <- your real app URL
 ]
 
 def wake(url: str) -> None:
